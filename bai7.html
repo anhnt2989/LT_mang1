@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai7</title>
+</head>
+<h1>Nhập vào 1 mảng số nguyên gồm 10 phần tử</h1>
+(Lưu ý : các phần tử trong mảng được ngăn cách bỏi dấu ",")<br>
+<textarea name="" id="inp" cols="30" rows="2"></textarea>
+<h2>Nhập vào 1 số nguuyên V</h2>
+<input type="number" id="V"/>
+<br><br>
+<input type="button" value="Check" onclick="CheckAndDel();"/>
+<p id="kq"></p>
+<body>
+            <script>
+                let array = (document.getElementById("inp").value).split(",");
+                let v = document.getElementById("V").value;
+
+                function CheckAndDel() {
+
+                    for (let i = 0; i < 10; i++) {
+                        if (v === array[i]) {
+                            array[i] = array[i + 1];
+                            array[i + 1] = '';
+                        } else {
+                            document.getElementById("kq").innerHTML = array;
+                        }
+                    }
+                }
+
+            </script>
+</body>
+</html>

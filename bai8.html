@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai8</title>
+</head>
+<h1>Nhập vào 1 mảng số nguyên gồm 10 phần tử</h1>
+(Chú ý : các phần tử được ngăn cách bởi dấu ",") <br>
+<textarea name="" id="inp" cols="30" rows="3"></textarea>
+<br><br>
+<input type="button" value="Sort" onclick="sxep();">
+<p id="kq"></p>
+<body>
+            <script>
+                function sxep() {
+                    let array = document.getElementById("inp").value.split(",");
+                    for (let i = 0; i < array.length; i++) {
+                        // array[i] = parseInt(array[i]);
+                        // console.log(array[i]);
+                        array.sort(sosanh);
+                    }
+                    function sosanh(a,b) {
+                        return b-a;
+                    }
+                    document.getElementById("kq").innerHTML = "[" + array + "]";
+                }
+            </script>
+</body>
+</html>

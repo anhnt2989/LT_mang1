@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai6</title>
+</head>
+<style>
+    .nd {
+        text-align: center;
+    }
+</style>
+<div class="nd">
+<h1>Nhập vào mảng gồm 10 phần tử</h1>
+(Lưu ý : các phần tử ngăn cách nhau bởi dấu ",")<br>
+    <label for="mArray"></label><textarea name="" id="mArray" cols="40" rows="3"></textarea><br>
+<h2>Nhập vào số V</h2>
+    <label for="V"></label><input name="" id="V"/><br><br>
+<input type="button" value="Check" onclick="check();"><br><br><br>
+<p id="kq"></p>
+</div>
+<body>
+        <script>
+            let array = (document.getElementById("mArray").value).split(",");
+            let V = document.getElementById("V").value;
+
+            function check() {
+                for (let i = 0; i < array.length; i++) {
+                    if (V === array[i]) {
+                        document.getElementById("kq").innerHTML = "V is in the array";
+                    } else {
+                        document.getElementById("kq").innerHTML = "V is not in the array";
+                    }
+                }
+            }
+
+        </script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai9</title>
+</head>
+<style>
+    .nd {
+        text-align: center;
+    }
+</style>
+
+<div class="nd">
+<p>Nhập vào mảng gồm 10 phần tử số nguyên</p>
+(Lưu ý : các phần tử được ngăn cách bởi dấu ",")<br>
+<label for="inpa"></label><textarea name="" id="inpa" cols="30" rows="3"></textarea>
+
+<p>Nhập thêm mảng gồm 10 phần tử số nguyên</p>
+(Lưu ý : các phần tử được ngăn cách bởi dấu ",")<br>
+<label for="inpb"></label><textarea name="" id="inpb" cols="30" rows="3"></textarea>
+<br><br>
+
+<input type="button" value="Do it!" onclick="khacnhap();">
+<br><br>
+
+<p>Mảng gồm 20 phần tử được join từ 2 mảng trên</p>
+<label for="outp"></label><textarea name="" id="outp" cols="50" rows="3"></textarea>
+</div>
+<body>
+            <script>
+                let a = (document.getElementById("inpa").value).split(",");
+                console.log(a);
+                let b = (document.getElementById("inpb").value).split(",");
+                console.log(b);
+                let c = [];
+                function khacnhap() {
+                    document.getElementById("outp").innerHTML = "[" + c.concat(a,b) + "]";
+                }
+            </script>
+</body>
+</html>

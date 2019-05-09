@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai1</title>
+</head>
+<p id="mang"></p>
+<p id="outp1"></p>
+<p id="outp2"></p>
+<body>
+        <script>
+            let array = [];
+            let result = '';
+            let count=0;
+            for (let i=0;i<10;i++) {
+                let rand = Math.floor(Math.random() * 99);
+                array.push(rand);
+            }
+            document.getElementById("mang").innerHTML = "[" + array + "]";
+            for (let j in array) {
+                if (array[j]>=10) {
+                    count++;
+                    result += array[j] + ", ";
+                }
+            }
+            document.getElementById("outp1").innerHTML = "Số lượng phần tử lớn hơn 10 : " + count;
+            document.getElementById("outp2").innerHTML = "Các phần tử đó là : " + result;
+        </script>
+</body>
+</html>

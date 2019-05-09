@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai2</title>
+</head>
+<p id="arr"></p>
+<p id="max"></p>
+<p id="pos"></p>
+<body>
+        <script>
+            let array = [];
+
+            for (let i=0;i<10;i++) {
+                let rand = Math.floor(Math.random() * 99);
+                    array.push(rand);
+
+                // console.log(array);
+            }
+            document.getElementById("arr").innerHTML = "array = [" + array + "]";
+
+            let x = Math.max.apply(Math,array);
+            // console.log(x);
+            let y = array.indexOf(x);
+            // console.log(y);
+
+            document.getElementById("max").innerHTML = "Phần tử có giá trị lớn nhất trong mảng là : " + x;
+            document.getElementById("pos").innerHTML = "Vị trí của nó trong mảng : array[" + y + "]";
+
+        </script>
+</body>
+</html>

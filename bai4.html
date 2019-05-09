@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai4</title>
+</head>
+<style>
+    .nd {
+        text-align: center;
+    }
+</style>
+
+
+<div class="nd">
+<p>Random Array :</p><br>
+    <label for="ra1"></label><textarea cols="40" rows="3" id="ra1" readonly></textarea><br>
+<p>Customize Array :</p>
+    (Lưu ý : các phần tử được ngăn cách nhau bởi dấu ",")<br>
+    <label for="ca1"></label><textarea cols="40" rows="3" id="ca1"></textarea><br><br>
+<input type="button" value="Revert" onclick="reverse();"><br>
+<p>Reversed Random Array :</p>
+    <label for="rar"></label><textarea cols="40" rows="3" id="rar" readonly></textarea><br>
+<p>Reversed Customize Array</p>
+    <label for="car"></label><textarea cols="40" rows="3" id="car" readonly></textarea>
+</div>
+<body>
+        <script>
+            let rarray = [];
+            for (let i=0;i<10;i++) {
+                let rand = Math.floor(Math.random() * 99);
+                rarray.push(rand);
+            }
+            document.getElementById("ra1").innerHTML = "[" + rarray + "]";
+
+            let carray = (document.getElementById("ca1").value).split(",");
+            console.log(carray);
+            document.getElementById("ca1").innerHTML = "[" + carray + "]";
+            function reverse() {
+                document.getElementById("rar").innerHTML = "[" + rarray.reverse() + "]";
+                document.getElementById("car").innerHTML = "[" + carray.reverse() + "]";
+            }
+
+        </script>
+
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai3</title>
+</head>
+<p id="arr"></p>
+<p id="max"></p>
+<p id="average"></p>
+<body>
+            <script>
+                let array = [];
+
+                for (let i=0;i<10;i++) {
+                    let rand = Math.floor(Math.random() * 99);
+                    array.push(rand);
+                }
+                document.getElementById("arr").innerHTML = "Array[" + array + "]";
+
+                let sum = array.reduce((previousValue, currentValue) => {return currentValue += previousValue});
+                console.log(sum);
+
+                let avg = sum / array.length;
+                let x = Math.max.apply(Math,array);
+
+                document.getElementById("max").innerHTML = "Phần tử lớn nhất trong mảng có giá trị = " + x;
+
+                document.getElementById("average").innerHTML = "Trung bình giá trị của các phần tử trong mảng = " + avg;
+            </script>
+</body>
+</html>
